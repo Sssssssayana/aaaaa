@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 import time, json, os, hashlib, secrets  # для хеширования пароля и токена
 from models import Change_Text_Request, Delete_Request, One_Text_Request, Cipher_Request, User, Change_Password_Request, \
     Text_Request, Token
-from text_fun import gronsfeld_encrypt, gronsfeld_decrypt
+from text_fun import encrypt, decrypt
 from password_veri import complex_password_s
 from addit import token_search, login_search, request
 
