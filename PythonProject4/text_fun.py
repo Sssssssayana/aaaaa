@@ -176,7 +176,7 @@ def validate_permutation(perm: list, size: int) -> bool:
     return sorted(perm) == list(range(1, size + 1))
 
 
-def gronsfeld_encrypt(text: str, key: List[int]) -> str:
+def encrypt(text: str, key: List[int]) -> str:
     """Шифрование методом двойной табличной перестановки"""
     # Определяем размеры матрицы
     rows, cols = get_matrix_size(text)
@@ -200,7 +200,7 @@ def gronsfeld_encrypt(text: str, key: List[int]) -> str:
     return matrix_to_text(matrix)
 
 
-def gronsfeld_decrypt(text: str, key: List[int]) -> str:
+def decrypt(text: str, key: List[int]) -> str:
     """Дешифрование методом двойной табличной перестановки"""
     # Определяем размеры матрицы
     rows, cols = get_matrix_size(text)
